@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 59334065}
   - component: {fileID: 59334064}
   - component: {fileID: 59334063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,6 +619,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 299459aec483d3a4daa2023ba2688e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mousePlaneLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &1980827331
 Transform:
   m_ObjectHideFlags: 0
