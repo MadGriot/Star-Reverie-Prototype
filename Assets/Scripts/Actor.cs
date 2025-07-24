@@ -20,6 +20,8 @@ public class Actor : MonoBehaviour
             Vector3 moveDirection = (targetPosition - transform.position).normalized;
             float moveSpeed = 4f;
             transform.position += moveDirection * Time.deltaTime * moveSpeed;
+            transform.forward = moveDirection;
+            transform.forward = Vector3.Lerp(transform.forward, moveDirection, Time.deltaTime * 10f);
             actorAnimator.SetBool("IsWalking", true);
 
         }
