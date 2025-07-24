@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Actor : MonoBehaviour
 {
+    [SerializeField] private Animator actorAnimator;
     private Vector3 targetPosition;
     void Start()
     {
@@ -19,6 +20,12 @@ public class Actor : MonoBehaviour
             Vector3 moveDirection = (targetPosition - transform.position).normalized;
             float moveSpeed = 4f;
             transform.position += moveDirection * Time.deltaTime * moveSpeed;
+            actorAnimator.SetBool("IsWalking", true);
+
+        }
+        else
+        {
+            actorAnimator.SetBool("IsWalking", false);
         }
 
 
