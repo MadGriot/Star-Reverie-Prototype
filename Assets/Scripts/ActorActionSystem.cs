@@ -5,9 +5,21 @@ using UnityEngine;
 
 public class ActorActionSystem : MonoBehaviour
 {
+    public static ActorActionSystem Instance { get; private set; }
     public event EventHandler OnSelectedActorChanged;
     [SerializeField] private Actor selectedActor;
     [SerializeField] private LayerMask actorLayerMask;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Debug.LogError("There's more thatn one ActorActionSystem!");
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
     void Start()
     {
         
