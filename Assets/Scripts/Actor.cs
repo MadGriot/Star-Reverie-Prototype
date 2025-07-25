@@ -6,6 +6,11 @@ public class Actor : MonoBehaviour
 {
     [SerializeField] private Animator actorAnimator;
     private Vector3 targetPosition;
+
+    private void Awake()
+    {
+        targetPosition = transform.position;
+    }
     void Start()
     {
         
@@ -30,14 +35,9 @@ public class Actor : MonoBehaviour
             actorAnimator.SetBool("IsWalking", false);
         }
 
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Move(MouseWorld.GetPosition());
-        }
     }
 
-    private void Move(Vector3 targetPosition)
+    public void Move(Vector3 targetPosition)
     {
         this.targetPosition = targetPosition;
     }
