@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Transform gridDebugObjectPrefab;
+
+    private GridSystem gridSystem;
     void Start()
     {
-        new GridSystem(10, 10, 2f);
+        gridSystem = new GridSystem(10, 10, 2f);
+        gridSystem.CreateDebugObjects(gridDebugObjectPrefab);
     }
 
     // Update is called once per frame
