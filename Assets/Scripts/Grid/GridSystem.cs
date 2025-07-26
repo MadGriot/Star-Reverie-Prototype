@@ -20,7 +20,6 @@ public class GridSystem
             for (int z = 0; z < length; z++)
             {
                 GridPosition gridPosition = new GridPosition(x, z);
-                new GridObject(this, gridPosition);
                 gridObjectArray[x, z] = new GridObject(this, gridPosition);
 
             }

@@ -6,6 +6,7 @@ public class Actor : MonoBehaviour
 {
     [SerializeField] private Animator actorAnimator;
     private Vector3 targetPosition;
+    private GridPosition gridPosition;
 
     private void Awake()
     {
@@ -13,7 +14,8 @@ public class Actor : MonoBehaviour
     }
     void Start()
     {
-        
+        gridPosition = LevelGrid.Instance.GetGridPosition(transform.position);
+        LevelGrid.Instance.AddActorAtGridPosition(gridPosition, this);
     }
 
     // Update is called once per frame
@@ -33,6 +35,12 @@ public class Actor : MonoBehaviour
         else
         {
             actorAnimator.SetBool("IsWalking", false);
+        }
+        GridPosition newGridPosition = LevelGrid.Instance.GetGridPosition(transform.position);
+        if (newGridPosition != gridPosition)
+        {
+            LevelGrid.Instance.ActorMovedGridPosition(this, gridPosition, newGridPosition);
+            gridPosition = newGridPosition;
         }
 
     }
