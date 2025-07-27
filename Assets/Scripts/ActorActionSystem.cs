@@ -33,7 +33,7 @@ public class ActorActionSystem : MonoBehaviour
         {
             if (TryHandleActorSelection()) return;
 
-            selectedActor.Move(MouseWorld.GetPosition());
+            selectedActor.GetMoveAction().Move(MouseWorld.GetPosition());
         }
     }
     private bool TryHandleActorSelection()

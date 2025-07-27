@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2940869333649862268}
   - component: {fileID: 7060027376765291828}
   - component: {fileID: 1056334279446287464}
+  - component: {fileID: 5197401013547016789}
   m_Layer: 7
   m_Name: Actor
   m_TagString: Untagged
@@ -47,7 +48,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a66e73c4166fd84483440d9a52ee19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actorAnimator: {fileID: 1866031843138970174}
 --- !u!65 &1056334279446287464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69,6 +69,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5170127, y: 1.7652363, z: 0.45658374}
   m_Center: {x: -0.004597366, y: 0.89795977, z: -0.015699357}
+--- !u!114 &5197401013547016789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6376066681314951942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53316bbda9df0d448d92739eab28898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actorAnimator: {fileID: 1866031843138970174}
 --- !u!1 &6645735562738454360
 GameObject:
   m_ObjectHideFlags: 0

@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 7, z: -10}
+  m_FollowOffset: {x: 0, y: 2.000002, z: -10}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -528,8 +528,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.30063936, y: 0.000000005932337, z: -0.0000000018700046, w: 0.9537379}
-  m_LocalPosition: {x: 0, y: 7, z: -10}
+  m_LocalRotation: {x: 0.09853762, y: -0.000000036206206, z: 0.0000000035851206, w: 0.99513334}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -725,8 +725,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388353245}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3006394, y: 0.0000000059323373, z: -0.0000000018700046, w: 0.9537379}
-  m_LocalPosition: {x: 0, y: 7, z: -10}
+  m_LocalRotation: {x: 0.09853762, y: -0.000000036206202, z: 0.00000000358512, w: 0.99513334}
+  m_LocalPosition: {x: 0, y: 2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -788,6 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc2adac3320152049acc60e9522bab64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachineVirtualCamera: {fileID: 1388353246}
 --- !u!1 &1644005757
 GameObject:
   m_ObjectHideFlags: 0
