@@ -32,8 +32,12 @@ public class ActorActionSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (TryHandleActorSelection()) return;
+            GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorld.GetPosition());
 
-            selectedActor.GetMoveAction().Move(MouseWorld.GetPosition());
+            if (selectedActor.GetMoveAction().IsValidActionGridPosition(mouseGridPosition))
+            {
+                selectedActor.GetMoveAction().Move(mouseGridPosition);
+            }
         }
     }
     private bool TryHandleActorSelection()

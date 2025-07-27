@@ -37,4 +37,6 @@ public class GridObject
     {
         return actors;
     }
+
+    public bool HasAnyActor() => actors.Count > 0;
 }
