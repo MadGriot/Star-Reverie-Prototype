@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
-
+    [SerializeField] private Actor actor;
     void Start()
     {
 
@@ -13,6 +13,9 @@ public class Testing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+
+        }
     }
 }

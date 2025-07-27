@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GridSystemVisualSingle : MonoBehaviour
+{
+    [SerializeField] private MeshRenderer meshRenderer;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void Show()
+    {
+        meshRenderer.enabled = true;
+    }
+
+    public void Hide()
+    {
+        meshRenderer.enabled=false;
+    }
+}
