@@ -6,10 +6,12 @@ public class Actor : MonoBehaviour
 {
     private GridPosition gridPosition;
     private MoveAction moveAction;
+    private BaseAction[] baseActionArray;
 
     private void Awake()
     {
         moveAction = GetComponent<MoveAction>();
+        baseActionArray = GetComponents<BaseAction>();
     }
 
     void Start()
@@ -41,4 +43,8 @@ public class Actor : MonoBehaviour
         return gridPosition;
     }
 
+    public BaseAction[] GetBaseActionArray()
+    {
+        return baseActionArray;
+    }
 }
