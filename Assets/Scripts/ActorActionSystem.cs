@@ -10,6 +10,7 @@ public class ActorActionSystem : MonoBehaviour
     [SerializeField] private Actor selectedActor;
     [SerializeField] private LayerMask actorLayerMask;
 
+    private bool isBusy;
     private void Awake()
     {
         if (Instance != null)
@@ -28,7 +29,7 @@ public class ActorActionSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isBusy) return;
         if (Input.GetMouseButtonDown(0))
         {
             if (TryHandleActorSelection()) return;
@@ -36,7 +37,8 @@ public class ActorActionSystem : MonoBehaviour
 
             if (selectedActor.GetMoveAction().IsValidActionGridPosition(mouseGridPosition))
             {
-                selectedActor.GetMoveAction().Move(mouseGridPosition);
+                SetBusy();
+                selectedActor.GetMoveAction().Move(mouseGridPosition, ClearBusy);
             }
         }
     }
@@ -63,5 +65,15 @@ public class ActorActionSystem : MonoBehaviour
     public Actor GetSelectedActor()
     {
         return selectedActor;
+    }
+
+    private void SetBusy()
+    {
+        isBusy = true;
+    }
+
+    private void ClearBusy()
+    {
+        isBusy = false;
     }
 }
